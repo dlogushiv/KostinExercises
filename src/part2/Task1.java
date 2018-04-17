@@ -1,7 +1,7 @@
 package part2;
 
 // вычислить косинусы углов 60; 45; 40 градусов не используя toDegree
-public class task1 {
+public class Task1 {
     public static void main(String[] args) {
         int a=60;
         int b=45;
