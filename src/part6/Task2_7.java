@@ -12,8 +12,8 @@ public class Task2_7 {
         boolean flag = false;
         int a;
         int sum = 1;
-        while (flag!=true); {
-            if (scanner.hasNextInt()) {
+        if (scanner.hasNextInt()) {
+            while (flag != true) {
                 a = scanner.nextInt();
                 if (a < 0) {
                     System.out.print("Введите положительное число: ");
@@ -26,10 +26,9 @@ public class Task2_7 {
                     flag = true;
                     System.out.println("Факториал числа " + a + " равен " + sum);
                 }
-            } /*else {
-                System.out.println("Вы ввели не число! Попробуйте еще раз: ");
-                // flag = false;
-            }*/
-        } ;//while (flag != true);
+            }
+        } else {
+            System.out.println("Вы ввели не число! Пока!");
+        }
     }
 }
