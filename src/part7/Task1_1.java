@@ -10,7 +10,7 @@ package part7;
 //        6
 //        …
 //        20
-public class Task1 {
+public class Task1_1 {
     public static void main(String[] args) {
         int a[]=new int[10];
         for (int i=0;i<a.length;i++){
