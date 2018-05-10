@@ -55,4 +55,10 @@ public class Circle {
     public double lengthCircle(){
         return 2*Math.PI*this.r;
     }
+
+    // Method which move circle center to random point on [-99;-99] ... [99;99]
+    public void moveCircle(){
+        this.x=Math.random()*198-99;
+        this.y=Math.random()*198-99;
+    }
 }

@@ -21,5 +21,11 @@ public class Main {
         System.out.println("Square of circle with radius " + circle4.r + " is " + circle4.squareCircle());
         circle4.equalsCircleSquare(circle2);
         System.out.println("Circumference of circle with radius " + circle3.r + " = " + circle3.lengthCircle());
+
+        System.out.println("Task 2 testing:");
+        circle3.printCircle();
+        circle3.moveCircle();
+        circle3.printCircle();
+
     }
 }
