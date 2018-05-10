@@ -1,5 +1,7 @@
 package part9;
 
+import java.util.Scanner;
+
 public class Circle {
     // circle properties
     public double x; // x coordinate
@@ -30,10 +32,31 @@ public class Circle {
 
     // default Circle constructor
     public Circle() {
-        this.x = 0.0;
-        this.y = 0.0;
-        this.r = 1.0;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter X coordinate of circle center: ");
+        while (!scanner.hasNextDouble()) {
+            System.out.print("You enter not a number. Please try again: ");
+            scanner.next();
+        }
+        this.x = scanner.nextDouble();
+
+        System.out.print("Please enter Y coordinate of circle center: ");
+        while (!scanner.hasNextDouble()) {
+            System.out.print("You enter not a number. Please try again: ");
+            scanner.next();
+        }
+        this.y = scanner.nextDouble();
+
+        do {
+            System.out.print("Please enter radius (positive number) of circle: ");
+            while (!scanner.hasNextDouble()) {
+                System.out.print("You enter not a number. Please try again: ");
+                scanner.next();
+            }
+            this.r = scanner.nextDouble();
+        } while (this.r <= 0);
     }
+
 
     // Circle constructor with parameters
     public Circle(double a, double b, double s) {
@@ -52,13 +75,13 @@ public class Circle {
     }
 
     // Circle circumference (length of circle)
-    public double lengthCircle(){
-        return 2*Math.PI*this.r;
+    public double lengthCircle() {
+        return 2 * Math.PI * this.r;
     }
 
     // Method which move circle center to random point on [-99;-99] ... [99;99]
-    public void moveCircle(){
-        this.x=Math.random()*198-99;
-        this.y=Math.random()*198-99;
+    public void moveCircle() {
+        this.x = Math.random() * 198 - 99;
+        this.y = Math.random() * 198 - 99;
     }
 }
