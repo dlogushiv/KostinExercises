@@ -84,4 +84,13 @@ public class Circle {
         this.x = Math.random() * 198 - 99;
         this.y = Math.random() * 198 - 99;
     }
+
+    // Method which calculate distance between circles centers
+    public double distCircleCentr(Circle circle){
+        double distance;
+        double offsetX=Math.abs(this.x-circle.x);
+        double offsetY=Math.abs(this.y-circle.y);
+        distance=Math.sqrt(offsetX*offsetX+offsetY*offsetY);
+        return distance;
+    }
 }

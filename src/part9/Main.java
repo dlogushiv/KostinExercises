@@ -26,9 +26,14 @@ public class Main {
 //        circle3.printCircle();
 //        circle3.moveCircle();
 //        circle3.printCircle();
+//
+//        System.out.println("Task 3 testing:");
+//        Circle circle5=new Circle();
+//        circle5.printCircle();
 
-        System.out.println("Task 3 testing:");
-        Circle circle5=new Circle();
-        circle5.printCircle();
+        System.out.println("Task 4 testing:");
+        Circle circle6=new Circle(0,0,3);
+        Circle circle7=new Circle(3,4,3);
+        System.out.println(circle6.distCircleCentr(circle7));
     }
 }
