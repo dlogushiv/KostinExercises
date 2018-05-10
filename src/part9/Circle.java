@@ -50,4 +50,9 @@ public class Circle {
             System.out.println("Circles squares are not equals!");
         }
     }
+
+    // Circle circumference (length of circle)
+    public double lengthCircle(){
+        return 2*Math.PI*this.r;
+    }
 }
