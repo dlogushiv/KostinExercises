@@ -29,6 +29,13 @@ public class Task1_2 {
         printArray(array3);
         printArray(array4);
         printArray(array5);
+
+        System.out.println("Sorted arrays by method from Task1_3:");
+        printArray(Task1_3.sortArray(array1));
+        printArray(Task1_3.sortArray(array2));
+        printArray(Task1_3.sortArray(array3));
+        printArray(Task1_3.sortArray(array4));
+        printArray(Task1_3.sortArray(array5));
     }
     public static void printArray(int[] array){
         for (int i=0;i<array.length; i++ ) {
