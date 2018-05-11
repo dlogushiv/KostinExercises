@@ -87,21 +87,20 @@ public class Circle {
     }
 
     // Method which calculate distance between circles centers
-    public double distCircleCentr(Circle circle){
+    public double distCircleCentr(Circle circle) {
         double distance;
-        double offsetX=Math.abs(this.x-circle.x);
-        double offsetY=Math.abs(this.y-circle.y);
-        distance=Math.sqrt(offsetX*offsetX+offsetY*offsetY);
+        double offsetX = Math.abs(this.x - circle.x);
+        double offsetY = Math.abs(this.y - circle.y);
+        distance = Math.sqrt(offsetX * offsetX + offsetY * offsetY);
         return distance;
     }
-    
-    // Method which checking tagency of circles
-    public boolean tangencyCircles(Circle circle) {
-        if(this.distCircleCentr(circle)==(this.r+circle.r) || this.distCircleCentr(circle)==Math.abs(this.r-circle.r)){
+
+    // Method which checking tangent of circles
+    public boolean tangentCircles(Circle circle) {
+        if (this.distCircleCentr(circle) == (this.r + circle.r) || this.distCircleCentr(circle) == Math.abs(this.r - circle.r)) {
             return true;
-        } else{
+        } else {
             return false;
         }
     }
-    
 }

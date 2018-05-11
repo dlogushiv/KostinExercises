@@ -33,18 +33,18 @@ public class Main {
 //        circle5.printCircle();
 
         System.out.println("Task 4 testing:");
-        Circle circle6=new Circle(0,0,3);
-        Circle circle7=new Circle(3,4,3);
+        Circle circle6 = new Circle(0, 0, 3);
+        Circle circle7 = new Circle(3, 4, 3);
         System.out.println(circle6.distCircleCentr(circle7));
-        
+
         System.out.println("Task 5 testing:");
-	    Circle circle8=new Circle(0, 0, 3);
-	    Circle circle9=new Circle(0, 1, 2);
-        if(circle8.tangencyCircles(circle9)){
-            System.out.println("The circles are tangensy.");
-        } else{
-            System.out.println("The circles are not tangensy.");
+        Circle circle8 = new Circle(0, 0, 3);
+        Circle circle9 = new Circle(0, 6, 2);
+        if (circle8.tangentCircles(circle9)) {
+            System.out.println("The circles are tangent.");
+        } else {
+            System.out.println("The circles are not tangent.");
         }
-    
+
     }
 }
