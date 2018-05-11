@@ -55,6 +55,7 @@ public class Circle {
             }
             this.r = scanner.nextDouble();
         } while (this.r <= 0);
+        scanner.close();
     }
 
 
@@ -93,4 +94,14 @@ public class Circle {
         distance=Math.sqrt(offsetX*offsetX+offsetY*offsetY);
         return distance;
     }
+    
+    // Method which checking tagency of circles
+    public boolean tangencyCircles(Circle circle) {
+        if(this.distCircleCentr(circle)==(this.r+circle.r) || this.distCircleCentr(circle)==Math.abs(this.r-circle.r)){
+            return true;
+        } else{
+            return false;
+        }
+    }
+    
 }

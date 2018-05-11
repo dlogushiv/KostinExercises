@@ -1,5 +1,6 @@
 package part9;
 
+
 public class Main {
     public static void main(String[] args) {
 //        Circle circle1 = new Circle();
@@ -35,5 +36,15 @@ public class Main {
         Circle circle6=new Circle(0,0,3);
         Circle circle7=new Circle(3,4,3);
         System.out.println(circle6.distCircleCentr(circle7));
+        
+        System.out.println("Task 5 testing:");
+	    Circle circle8=new Circle(0, 0, 3);
+	    Circle circle9=new Circle(0, 1, 2);
+        if(circle8.tangencyCircles(circle9)){
+            System.out.println("The circles are tangensy.");
+        } else{
+            System.out.println("The circles are not tangensy.");
+        }
+    
     }
 }
