@@ -43,4 +43,24 @@ public class Point {
 //        if (this.x == point.x && this.y == point.y) return true;
 //        else return false;
     }
+
+    public void quarterPoint() {
+        if (this.x == 0 && this.y == 0) {
+            System.out.println("Point is at a zero position.");
+        } else {
+            if (this.x >= 0) {
+                if (this.y > 0) {
+                    System.out.println("Point (" + this.x + "; " + this.y + ") is at I quarter.");
+                } else {
+                    System.out.println("Point (" + this.x + "; " + this.y + ") is at IV quarter.");
+                }
+            } else {
+                if (this.y > 0) {
+                    System.out.println("Point (" + this.x + "; " + this.y + ") is at II quarter.");
+                } else {
+                    System.out.println("Point (" + this.x + "; " + this.y + ") is at III quarter.");
+                }
+            }
+        }
+    }
 }
