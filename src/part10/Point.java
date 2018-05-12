@@ -57,10 +57,33 @@ public class Point {
         return Math.sqrt(Math.pow((this.x - point.x), 2) + Math.pow((this.y - point.y), 2));
     }
 
-    public boolean equalsPoints(Point point) {
-        return (this.x == point.x && this.y == point.y);// ? true : false;
-//        if (this.x == point.x && this.y == point.y) return true;
-//        else return false;
+//    public boolean equalsPoints(Point point) {
+//        return (this.x == point.x && this.y == point.y);// ? true : false;
+////        if (this.x == point.x && this.y == point.y) return true;
+////        else return false;
+//    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Point point = (Point) o;
+
+        if (Double.compare(point.x, x) != 0) return false;
+        return Double.compare(point.y, y) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(x);
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(y);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
     }
 
     public void quarterPoint() {
