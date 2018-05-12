@@ -27,9 +27,19 @@ public class Main {
 //        } else {
 //            System.out.println("Point (" + point3.x + "; " + point3.y + ") is not symmetry to point (" + point5.x + "; " + point5.y + ").");
 //        }
+//
+//        System.out.println("Task 3 testing:");
+//        Point point7 = new Point();
+//        point7.printPoint();
 
-        System.out.println("Task 3 testing:");
-        Point point7 = new Point();
-        point7.printPoint();
+        System.out.println("Task 4 testing:");
+        Point point8=new Point(1,1);
+        Point point9=new Point(5,5);
+        Point point10=new Point(3,3);
+        if (point10.collinearPoints(point8,point9)) {
+            System.out.println("Point (" + point10.x + "; " + point10.y + ") is collinear with line from point (" + point8.x + "; " + point8.y + ") to point (" + point9.x + "; " + point9.y + ").");
+        } else {
+            System.out.println("Point (" + point10.x + "; " + point10.y + ") is not collinear with line from point (" + point8.x + "; " + point8.y + ") to point (" + point9.x + "; " + point9.y + ").");
+        }
     }
 }

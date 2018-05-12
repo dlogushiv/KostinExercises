@@ -86,4 +86,8 @@ public class Point {
     public boolean symmetryPoints(Point point) {
         return (this.x == -point.x && this.y == -point.y);
     }
+
+    public boolean collinearPoints(Point point1, Point point2){
+        return ((this.x-point1.x)/(point2.x- point1.x)==(this.y-point1.y)/(point2.y- point1.y));
+    }
 }
