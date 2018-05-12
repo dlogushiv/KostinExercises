@@ -33,9 +33,9 @@ public class Main {
 //        point7.printPoint();
 
         System.out.println("Task 4 testing:");
-        Point point8 = new Point(1, 1);
-        Point point9 = new Point(5, 5);
-        Point point10 = new Point(3, 3);
+        Point point8 = new Point(0, 0);
+        Point point9 = new Point(0, 5);
+        Point point10 = new Point(0, 3);
         if (point10.collinearPoints(point8, point9)) {
             System.out.println("Point (" + point10.x + "; " + point10.y + ") is collinear with line from point (" + point8.x + "; " + point8.y + ") to point (" + point9.x + "; " + point9.y + ").");
         } else {

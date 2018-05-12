@@ -10,12 +10,20 @@ public class Triangle {
     public Triangle(Point vertexA, Point vertexB, Point vertexC) {
         this.vertexA = vertexA;
         this.vertexB = vertexB;
-        this.vertexC = vertexC;
+        if (!vertexC.collinearPoints(vertexA, vertexB)) {
+            this.vertexC = vertexC;
+        } else {
+            do {
+                System.out.println("Vertex C is collinear to line AB. Change vertex C coordinates.");
+                vertexC = new Point();
+            } while (vertexC.collinearPoints(vertexA, vertexB));
+            this.vertexC = vertexC;
+        }
     }
 
     @Override
     public String toString() {
-        return "Triangle{" + vertexA + vertexB + vertexC + '}';
+        return "Triangle{" + vertexA + ',' + vertexB + ',' + vertexC + '}';
     }
 
     public void printTriangle() {
