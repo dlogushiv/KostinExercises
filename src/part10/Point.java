@@ -1,5 +1,7 @@
 package part10;
 
+import java.util.Scanner;
+
 public class Point {
     // Point properties
     public double x;
@@ -24,9 +26,26 @@ public class Point {
         this.y = b;
     }
 
+    //    public Point() {
+//        this.x = 0.0;
+//        this.y = 0.0;
+//    }
+    // Modified default constructor for user input coordinates
     public Point() {
-        this.x = 0.0;
-        this.y = 0.0;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter X coordinate of point: ");
+        while (!scanner.hasNextDouble()) {
+            System.out.print("You enter not a number. Please try again: ");
+            scanner.next();
+        }
+        this.x = scanner.nextDouble();
+        System.out.print("Please enter Y coordinate of point: ");
+        while (!scanner.hasNextDouble()) {
+            System.out.print("You enter not a number. Please try again: ");
+            scanner.next();
+        }
+        this.y = scanner.nextDouble();
+        scanner.close();
     }
 
     public Point(double a, double b) {
