@@ -63,4 +63,8 @@ public class Point {
             }
         }
     }
+
+    public boolean symmetryPoints(Point point) {
+        return (this.x == -point.x && this.y == -point.y);
+    }
 }

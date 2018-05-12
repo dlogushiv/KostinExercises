@@ -13,12 +13,19 @@ public class Main {
         System.out.println("Task 1 testing:");
         Point point3 = new Point(3, 5);
         Point point4 = new Point(-9, 4);
-        Point point5 = new Point(-8, -1);
-        Point point6 = new Point(3, -2);
+        Point point5 = new Point(-3, -6);
+        Point point6 = new Point(10, -15);
         point1.quarterPoint();
         point3.quarterPoint();
         point4.quarterPoint();
         point5.quarterPoint();
         point6.quarterPoint();
+
+        System.out.println("Task 2 testing:");
+        if (point3.symmetryPoints(point5)) {
+            System.out.println("Point (" + point3.x + "; " + point3.y + ") is symmetry to point (" + point5.x + "; " + point5.y + ").");
+        } else {
+            System.out.println("Point (" + point3.x + "; " + point3.y + ") is not symmetry to point (" + point5.x + "; " + point5.y + ").");
+        }
     }
 }
