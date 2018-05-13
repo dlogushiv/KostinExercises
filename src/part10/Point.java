@@ -111,6 +111,12 @@ public class Point {
     }
 
     public boolean collinearPoints(Point point1, Point point2) {
-        return ((this.x - point1.x) / (point2.x - point1.x) == (this.y - point1.y) / (point2.y - point1.y));
+        double x=this.x;
+        double y = this.y;
+        double x1= point1.x;
+        double y1= point1.y;
+        double x2= point2.x;
+        double y2= point2.y;
+        return ((y1-y2)*x+(x2-x1)*y+(x1*y2-x2*y1)==0);
     }
 }
