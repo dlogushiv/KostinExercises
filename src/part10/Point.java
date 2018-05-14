@@ -119,4 +119,21 @@ public class Point {
         double y2= point2.y;
         return ((y1-y2)*x+(x2-x1)*y+(x1*y2-x2*y1)==0);
     }
+
+    public Point rotate(double deg){
+        System.out.println("Please enter rotation point coordinates");
+        Point rotationPoint = new Point();
+        double newX=this.x-rotationPoint.x;
+        double newY=this.y-rotationPoint.y;
+        System.out.println(newX+", "+newY);
+        double rad=deg*Math.PI/180;
+        // rotate
+        newX=newX*Math.cos(rad)-newY*Math.sin(rad);
+        newY=newX*Math.sin(rad)+newY*Math.cos(rad);
+        System.out.println(newX+", "+newY);
+        // move back from (0; 0) to center
+        newX=newX+rotationPoint.x;
+        newY=newY+rotationPoint.y;
+        return new Point(newX,newY);
+    }
 }

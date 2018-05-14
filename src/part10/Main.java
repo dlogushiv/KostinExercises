@@ -41,5 +41,11 @@ public class Main {
         } else {
             System.out.println("Point (" + point10.x + "; " + point10.y + ") is not collinear with line from point (" + point8.x + "; " + point8.y + ") to point (" + point9.x + "; " + point9.y + ").");
         }
+
+        System.out.println("rotation testing:");
+        Point point11=new Point();
+        point11.printPoint();
+        Point point12=point11.rotate(90);
+        point12.printPoint();
     }
 }
