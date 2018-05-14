@@ -8,6 +8,8 @@ public class Main {
         triangle1.printTriangle();
         System.out.println("Perimeter of triangle: " + triangle1.perimTriangle());
         System.out.println("Square of triangle: " + triangle1.squareTriangle());
+        triangle1.setVertexA(new Point());
+        System.out.println(triangle1);
 
     }
 }

@@ -3,9 +3,9 @@ package part11;
 import part10.Point;
 
 public class Triangle {
-    public Point vertexA;
-    public Point vertexB;
-    public Point vertexC;
+    private Point vertexA;
+    private Point vertexB;
+    private Point vertexC;
 
     public Triangle(Point vertexA, Point vertexB, Point vertexC) {
         this.vertexA = vertexA;
@@ -19,6 +19,30 @@ public class Triangle {
             } while (vertexC.collinearPoints(vertexA, vertexB));
             this.vertexC = vertexC;
         }
+    }
+
+    public void setVertexA(Point vertexA) {
+        while (vertexA.collinearPoints(this.vertexB, this.vertexC)) {
+            System.out.println("Vertex A is collinear to line BC. Change vertex A coordinates.");
+            vertexA = new Point();
+        }
+        this.vertexA = vertexA;
+    }
+
+    public void setVertexB(Point vertexB) {
+        while (vertexB.collinearPoints(this.vertexA, this.vertexC)) {
+            System.out.println("Vertex B is collinear to line AC. Change vertex B coordinates.");
+            vertexB = new Point();
+        }
+        this.vertexB = vertexB;
+    }
+
+    public void setVertexC(Point vertexC) {
+        while (vertexC.collinearPoints(this.vertexA, this.vertexB)) {
+            System.out.println("Vertex C is collinear to line AB. Change vertex C coordinates.");
+            vertexC = new Point();
+        }
+        this.vertexC = vertexC;
     }
 
     @Override
