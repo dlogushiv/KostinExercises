@@ -10,7 +10,7 @@ public class Main {
 //        System.out.println("Square of triangle: " + triangle1.squareTriangle());
 //        triangle1.setVertexA(new Point());
 //        System.out.println(triangle1);
-        Triangle triangle2=triangle1.rotateTriangle(90);
+        Triangle triangle2 = triangle1.rotateTriangle(90);
         triangle2.printTriangle();
 
 

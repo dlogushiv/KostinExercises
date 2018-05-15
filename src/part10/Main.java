@@ -43,9 +43,9 @@ public class Main {
         }
 
         System.out.println("rotation testing:");
-        Point point11=new Point();
+        Point point11 = new Point();
         point11.printPoint();
-        Point point12=point11.rotate(90);
+        Point point12 = point11.rotatePoint(new Point(),90);
         point12.printPoint();
     }
 }

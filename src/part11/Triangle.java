@@ -72,30 +72,12 @@ public class Triangle {
     public Triangle rotateTriangle(double deg) {
         // https://ru.wikipedia.org/wiki/Барицентр
         Point center = new Point((this.vertexA.x + this.vertexB.x + this.vertexC.x) / 3, (this.vertexA.y + this.vertexB.y + this.vertexC.y) / 3);
-        center.printPoint();
-        // http://www.abakbot.ru/online-2/91-rotate
-        // move center and other vertexes to (0; 0)
-        double AX=this.vertexA.x-center.x;
-        double AY=this.vertexA.y-center.y;
-        double BX=this.vertexB.x-center.x;
-        double BY=this.vertexB.y-center.y;
-        double CX=this.vertexC.x-center.x;
-        double CY=this.vertexC.y-center.y;
-        double rad=deg*Math.PI/180;
-        // rotate
-        AX=AX*Math.cos(rad)-AY*Math.sin(rad);
-        AY=AX*Math.sin(rad)+AY*Math.cos(rad);
-        BX=BX*Math.cos(rad)-BY*Math.sin(rad);
-        BY=BX*Math.sin(rad)+BY*Math.cos(rad);
-        CX=CX*Math.cos(rad)-CY*Math.sin(rad);
-        CY=CX*Math.sin(rad)+CY*Math.cos(rad);
-        // move back from (0; 0) to center
-        AX=AX+center.x;
-        AY=AY+center.y;
-        BX=BX+center.x;
-        BY=BY+center.y;
-        CX=CX+center.x;
-        CY=CY+center.y;
-        return new Triangle(new Point(AX,AY),new Point(BX,BY),new Point(CX,CY));
+//        System.out.print("A center of triangle: ");
+//        center.printPoint();
+        Point newA = this.vertexA.rotatePoint(center, deg);
+        Point newB = this.vertexB.rotatePoint(center, deg);
+        Point newC = this.vertexC.rotatePoint(center, deg);
+
+        return new Triangle(newA, newB, newC);
     }
 }
